@@ -1,25 +1,25 @@
 .section__container {
   position: relative;
   min-height: 100vh;
-  padding: 8vw 3vw;
+  padding: 6vw 3vw;
   text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-#section1, #section2,  #section3, #section4 {
+section {
   position: relative;
   width: 100%;
   background-size:cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  border-bottom: 3px solid white;
 }
 
 
-
-h1 {
-  font-size: 7vw;
+#section1 h1 {
+  font-size: 6.5vw;
   color: #1E1F26;
   align-self: center;
   text-align: center;
@@ -28,20 +28,17 @@ h1 {
 
 #section1 p {
   font-family: 'Tourney', cursive;
-  font-size: 5vw;
+  font-size: 3.5vw;
   color: #1E1F26;
   align-self: center;
 }
 
 #section1 .section__container {
-  padding: 4vw 3vw;
+  padding: 7vw 3vw 5vw 3vw;
 }
-
-
 
 h2 {
   font-size: 5.5vw;
-  margin-top: 4vw;
 }
 
 p {
@@ -55,7 +52,7 @@ p {
 }
 
 .active-section {
-  border: 3px solid red;
+  /* border: 3px solid red; */
 }
 
 #section4 h2 {

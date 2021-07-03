@@ -1,19 +1,8 @@
-
 @import './_footer.css';
 @import './_navbar.css';
 @import './_header.css';
 @import './_section.css';
 
-/* #F1F1F2 */
-/* #BCBABE */
-/* #A1D6E2 */
-/* #1995AD */
-
-/* #1E1F26 */
-/* #283655 */
-/* #4D648D */
-/* #D0E1F9 */
-/* ---- Base Rules ---- */
 
 * {
   margin: 0;
@@ -31,6 +20,7 @@ body {
 
 
 main {
+  position: relative;
   padding-top: 50px;
 }
 
@@ -39,44 +29,45 @@ h1, h2, p {
   font-family: 'Tourney', cursive;
 }
 
-/* ---- Layout Rules ---- */
 
+#scroll__top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 100;
+  width: 60px;
+  height: 60px;
+  background: #729be2;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  display: none;
+  z-index: 80;
+}
+
+#scroll__top:hover {
+  background: #7da3e4;
+}
+
+#scroll__top:active {
+  background: #4D648D;
+}
+
+.scroll__icon {
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url('../images/rocket.svg');
+}
 
 /* section {
   position: relative;
   min-height: 80vh;
 } */
-
-
-/* ---- Module Rules ---- */
-
-/* Navigation Styles*/
-/* .navbar__menu ul {
-  padding-left: 0;
-  margin: 0;
-  text-align: right;
-}
-
-.navbar__menu li {
-  display: inline-block;
-}
-
-.navbar__menu .menu__link {
-  display: block;
-  padding: 1em;
-  font-weight: bold;
-  text-decoration: none;
-  color: #000;
-}
-
-.navbar__menu .menu__link:hover {
-  background: #333;
-  color: #fff;
-  transition: ease 0.3s all;
-} */
-
-
-
 
 
 /* ---- Theme Rules ---- */

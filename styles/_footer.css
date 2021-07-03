@@ -1,9 +1,9 @@
 .page__footer {
   position: relative;
   width: 100%;
-  height: 100px;
+  height: 70px;
   background: #1E1F26;
-  padding: 10px 20px;
+  padding: 10px 120px 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,7 +26,6 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   color: white;
-  background-image: url('../images/footer_icon.svg');
   cursor: pointer;
   transition: transform .3s;
 }
