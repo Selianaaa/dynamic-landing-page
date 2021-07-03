@@ -1,0 +1,53 @@
+.navbar__menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  height: 60px;
+  width: 100%;
+  background: #1E1F26;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid tan;
+}
+
+.navbar__title {
+  font-size: 35px;
+  font-family: 'Tourney', cursive;
+}
+
+
+.navbar__title:before {
+  content: '';
+  float: left;
+  height: 35px;
+  width: 35px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url('../images/page_icon.svg');
+  margin-right: 10px;
+}
+
+.nav__link {
+  display: inline-block;
+  font-family: 'Tourney', cursive;
+  font-size: 25px;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+.nav__link:not(:first-child) {
+  margin-left: 10px;
+}
+
+.nav__link:hover {
+  color: #7da3e4;
+}
+
+.nav__link:active {
+  color: #4D648D;
+  transition: 0.3s;
+}
