@@ -10,14 +10,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid tan;
 }
 
 .navbar__title {
   font-size: 35px;
   font-family: 'Tourney', cursive;
 }
-
 
 .navbar__title:before {
   content: '';
@@ -50,4 +48,8 @@
 .nav__link:active {
   color: #4D648D;
   transition: 0.3s;
+}
+
+.active-nav {
+  color: #7da3e4;
 }

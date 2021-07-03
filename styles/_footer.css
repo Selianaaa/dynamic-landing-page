@@ -9,6 +9,10 @@
   align-items: center;
 }
 
+.footer__copyright {
+  font-size: 22px;
+}
+
 .footer__icons {
   position: relative;
   display: flex;

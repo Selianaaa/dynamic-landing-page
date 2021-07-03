@@ -1,0 +1,110 @@
+.section__container {
+  position: relative;
+  min-height: 100vh;
+  padding: 8vw 3vw;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#section1, #section2,  #section3, #section4 {
+  position: relative;
+  width: 100%;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+#section1 {
+  background-image: url('../images/main.jpg');
+}
+
+
+h1 {
+  font-size: 7vw;
+  color: #1E1F26;
+  align-self: center;
+  text-align: center;
+  width: 50vw;
+}
+
+#section1 p {
+  font-family: 'Tourney', cursive;
+  font-size: 5vw;
+  color: #1E1F26;
+  align-self: center;
+}
+
+#section1 .section__container {
+  padding: 4vw 3vw;
+}
+
+#section2 {
+  background-image: url('../images/titan.jpeg');
+}
+
+#section3 {
+  background-image: url('../images/solar_stratos.jpeg');
+}
+
+#section4 {
+  background-image: url('../images/aquila.jpg');
+}
+
+
+h2 {
+  font-size: 5.5vw;
+  margin-top: 4vw;
+}
+
+p {
+  font-size: 3vw;
+}
+
+#section2 p {
+  width: 50vw;
+  text-align: right;
+  align-self: flex-end;
+}
+
+.active-section {
+  border: 3px solid red;
+}
+
+#section4 h2 {
+  color: #1E1F26;
+}
+#section4 p {
+  color: #1E1F26;
+  width: 50vw;
+  align-self: flex-start;
+}
+/* ---- Theme State Rules ---- */
+/* Section Active Styles */
+/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
+/* section.your-active-class {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+section.your-active-class .landing__container::before {
+  opacity: 1;
+  animation: rotate 4s linear 0s infinite forwards;
+}
+
+section.your-active-class .landing__container::after {
+  opacity: 1;
+  animation: rotate 5s linear 0s infinite forwards reverse;
+} */
+
+
+
+
+
+/* @media only screen and (min-width: 35em){
+  .section__container {
+      max-width: 50em;
+      padding: 4em;
+  }
+} */
