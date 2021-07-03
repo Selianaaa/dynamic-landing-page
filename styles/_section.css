@@ -16,9 +16,6 @@
   background-position: 50% 50%;
 }
 
-#section1 {
-  background-image: url('../images/main.jpg');
-}
 
 
 h1 {
@@ -40,17 +37,6 @@ h1 {
   padding: 4vw 3vw;
 }
 
-#section2 {
-  background-image: url('../images/titan.jpeg');
-}
-
-#section3 {
-  background-image: url('../images/solar_stratos.jpeg');
-}
-
-#section4 {
-  background-image: url('../images/aquila.jpg');
-}
 
 
 h2 {
