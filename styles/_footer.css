@@ -52,7 +52,35 @@
   background-image: url('../images/social/twitter.svg');
 }
 
-@media (max-width: 960px) {
+
+
+@media (min-width: 1920px) {
+  .page__footer {
+    height: 7vw;
+    padding: 1vw 12vw;
+  }
+  
+  .footer__copyright {
+    font-size: 2vw;
+    text-align: center;
+  }
+
+  .footer__icons {
+    margin-top: 20px;
+  }
+
+  .footer__icon {
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+
+  .footer__icon:not(:first-child) {
+    margin-left: 1.5vw;
+  }
+}
+
+
+@media (max-width: 768px) {
   .page__footer {
     height: 150px;
     padding: 10px 15px;
@@ -66,9 +94,6 @@
   }
 
   .footer__icons {
-    /* align-self: flex-start; */
-
     margin-top: 20px;
   }
-  
 }

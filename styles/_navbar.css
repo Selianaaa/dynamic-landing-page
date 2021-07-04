@@ -52,3 +52,35 @@
 .active-nav {
   color: #7da3e4;
 }
+
+
+
+@media (min-width: 1920px) {
+  .navbar__menu {
+    height: 6vw;
+    padding: 1vw 2vw;
+  }
+  
+  .navbar__title {
+    font-size: 3.8vw;
+  }
+  
+  .navbar__title:before {
+    height: 4vw;
+    width: 4vw;
+    margin-right: 1vw;
+  }
+  
+  .nav__link {
+    font-size: 3vw;
+  }
+
+  .nav__link:not(:first-child) {
+    margin-left: 1.5vw;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+}
