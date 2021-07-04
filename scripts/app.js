@@ -109,6 +109,23 @@ const sectionIsViewed = (section) => {
 }
 
 
+/**
+ * Show mobile menu
+ */
+ const showMobileMenu = () => {
+  const navbarList = document.getElementById('navbar__list')
+
+  if (navbarList.style.transform === 'translateX(-180px)') {
+    return navbarList.style.transform = 'translateX(180px)'
+  }
+    
+  return navbarList.style.transform = 'translateX(-180px)'
+}
+
+
+
+// showMobileMenu
+
 document.addEventListener('DOMContentLoaded', () => {
   const navList = document.getElementById('navbar__list')
   const sections = document.querySelectorAll('section')
