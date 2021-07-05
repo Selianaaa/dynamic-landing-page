@@ -32,9 +32,8 @@ const sectionsContent = [
   },
 ]
 
-
 /**
- * Creates navbar links acording to sections amount
+ * Creates navbar links according to sections amount
  * @param {HTMLElement[]} sections - section elements
  * @param {HTMLElement} navList - nav list element
  */
@@ -50,7 +49,6 @@ const initializeData = (sections, navList) => {
       initializeNavItem(section, navList)
       initializeSection(section, sectionContent)
     }
-
   })
 }
 
@@ -87,17 +85,22 @@ const initializeSection = (section, sectionContent) => {
   sectionTitle.textContent = sectionContent.title
   sectionText.textContent = sectionContent.text
 
-  section.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${sectionContent.image}')`
+  section.style.backgroundImage = `
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${sectionContent.image}')
+  `
   sectionContainer.appendChild(sectionTitle)
   sectionContainer.appendChild(sectionText)
 }
 
 /**
- * Check if section is visible
+ * Check if section is visible in viewport
+ * @param {HTMLElement} section - section element
+ * @param {number} navbarHeight - heigth of navbar in current viewport's width
  */
-const sectionIsViewed = (section) => {
-  const rect = section.getBoundingClientRect();
-  return rect.y <= 60 && rect.bottom >= 150
+const sectionIsVisible = (section, navbarHeight) => {
+  const sectionRect = section.getBoundingClientRect();
+
+  return sectionRect.y <= navbarHeight && sectionRect.bottom >= navbarHeight
 }
 
 /**
@@ -105,28 +108,38 @@ const sectionIsViewed = (section) => {
  */
  const scrollToTop = () => {
   const topSection = document.getElementById(`${sectionsContent[0].id}`)
+
   topSection.scrollIntoView({behavior: 'smooth'})
 }
 
+/**
+ * Check if menu is visible
+ * @param {string} transform - current menu transform
+ */
+const menuIsActive = (transform) => {
+  return transform === 'translateX(-180px)'
+}
 
 /**
  * Handle mobile menu click
  */
  const handleMenuClick = () => {
-  const navbarButton = document.querySelector('.mobile__menu__button')
+  const navbarButton = document.querySelector('.mobile__navbar__button')
   const navbarList = document.getElementById('navbar__list')
+  const currentListTransform = navbarList.style.transform   
 
-  if (navbarList.style.transform === 'translateX(-180px)') {
-    navbarList.style.transform = 'translateX(180px)'
-  } else {
-    navbarList.style.transform = 'translateX(-180px)'
-  }
+  navbarList.style.transform = menuIsActive(currentListTransform) 
+    ? 'translateX(180px)' 
+    : 'translateX(-180px)'
 
   navbarButton.classList.toggle('active__menu')
 }
 
-
+/**
+ * Execute when DOM is loaded
+ */
 document.addEventListener('DOMContentLoaded', () => {
+  const navbarMenu = document.querySelector('.navbar__menu')
   const navList = document.getElementById('navbar__list')
   const sections = document.querySelectorAll('section')
   const scrollTopElement = document.getElementById('scroll__top')
@@ -137,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const sectionTitle = section.getAttribute('data-section')
       const sectionNavLink = navList.querySelector(`[data-nav='${sectionTitle}']`)
 
-      if (sectionIsViewed(section)) {
+      if (sectionIsVisible(section, navbarMenu.getBoundingClientRect().height)) {
         section.classList.add('active-section')
         sectionNavLink.classList.add('active-nav')
         scrollTopElement.style.display = section.getAttribute('id') === sectionsContent[0].id ? 'none' : 'flex'
@@ -150,8 +163,3 @@ document.addEventListener('DOMContentLoaded', () => {
   
   initializeData(sections, navList)
 })
-
-
-
-
-// Preloader

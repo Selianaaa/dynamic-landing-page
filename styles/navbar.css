@@ -54,7 +54,7 @@
   color: #7da3e4;
 }
 
-.mobile__menu__button {
+.mobile__navbar__button {
   position: relative;
   display: none;
   height: 100%;
@@ -65,7 +65,7 @@
   cursor: pointer;
 }
 
-.mobile__menu__button span {
+.mobile__navbar__button span {
   position: relative;
   width: 7px;
   height: 7px;
@@ -74,7 +74,7 @@
   transition: 0.1s linear;
 }
 
-.mobile__menu__button span::before, .mobile__menu__button span::after {
+.mobile__navbar__button span::before, .mobile__navbar__button span::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -87,11 +87,11 @@
   transition: width .1s, height .1s, transform 0.3s;
 }
 
-.mobile__menu__button span::before {
+.mobile__navbar__button span::before {
   transform: translateY(-15px);
 }
 
-.mobile__menu__button span::after {
+.mobile__navbar__button span::after {
   transform: translateY(15px);
 }
 
@@ -142,7 +142,7 @@
 
 @media (max-width: 768px) {
 
-  .mobile__menu__button {
+  .mobile__navbar__button {
     display: flex;
   }
 
