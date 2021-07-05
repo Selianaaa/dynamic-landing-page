@@ -59,7 +59,7 @@
   display: none;
   height: 100%;
   width: 20px;
-  margin: 3px 10px 3px 0;
+  margin: 3px 5px 3px 0;
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -84,7 +84,7 @@
   border-radius: inherit;
   background: inherit;
   transform-origin: center;
-  transition: width 0.1s, height 0.1s, transform 0.333s;
+  transition: width .1s, height .1s, transform 0.3s;
 }
 
 .mobile__menu__button span::before {

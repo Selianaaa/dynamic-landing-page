@@ -17,7 +17,6 @@ section {
   border-bottom: 3px solid white;
 }
 
-
 #section1 h1 {
   font-size: 6.5vw;
   color: #1E1F26;
@@ -30,7 +29,7 @@ section {
   font-family: 'Tourney', cursive;
   font-size: 3.5vw;
   color: #1E1F26;
-  align-self: center;
+  text-align: center;
 }
 
 #section1 .section__container {
@@ -46,48 +45,66 @@ p {
 }
 
 #section2 p {
-  width: 50vw;
   text-align: right;
   align-self: flex-end;
-}
-
-.active-section {
-  /* border: 3px solid red; */
 }
 
 #section4 h2 {
   color: #1E1F26;
 }
+
 #section4 p {
   color: #1E1F26;
-  width: 50vw;
   align-self: flex-start;
 }
-/* ---- Theme State Rules ---- */
-/* Section Active Styles */
-/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
-/* section.your-active-class {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+
+#section2 p, #section4 p {
+  width: 50vw;
 }
 
-section.your-active-class .landing__container::before {
-  opacity: 1;
-  animation: rotate 4s linear 0s infinite forwards;
-}
 
-section.your-active-class .landing__container::after {
-  opacity: 1;
-  animation: rotate 5s linear 0s infinite forwards reverse;
-} */
-
-
-
-
-
-/* @media only screen and (min-width: 35em){
-  .section__container {
-      max-width: 50em;
-      padding: 4em;
+@media (max-width: 768px) {
+  p {
+    font-size: 16px;
   }
-} */
+
+  h2 {
+    font-size: 24px;
+  }
+
+  section {
+    border-bottom-width: 2px;
+  }
+  
+
+  #section1 .section__container {
+    padding: 80px 10px 50px 10px;
+  }
+
+  #section1 h1 {
+    font-size: 30px;
+  }
+
+  #section1 p {
+   font-size: 20px;
+   text-align: center;
+  }
+
+  #section2 p, #section4 p,  #section3 p {
+    width: 70vw;
+  }
+
+  #section3 p {
+    text-align: left;
+  }
+
+  #section4 {
+    background-position: 20% 50%;
+  }
+
+  #section4 p {
+    text-align: right;
+    align-self: flex-end;
+  }
+    
+}
