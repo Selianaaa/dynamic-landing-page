@@ -26,6 +26,7 @@ main {
 
 h1, h2, p {
   font-family: 'Tourney', cursive;
+  font-weight: 300;
 }
 
 

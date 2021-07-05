@@ -87,7 +87,7 @@ const initializeSection = (section, sectionContent) => {
   sectionTitle.textContent = sectionContent.title
   sectionText.textContent = sectionContent.text
 
-  section.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('${sectionContent.image}')`
+  section.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${sectionContent.image}')`
   sectionContainer.appendChild(sectionTitle)
   sectionContainer.appendChild(sectionText)
 }
