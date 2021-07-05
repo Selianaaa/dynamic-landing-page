@@ -110,21 +110,21 @@ const sectionIsViewed = (section) => {
 
 
 /**
- * Show mobile menu
+ * Handle mobile menu click
  */
- const showMobileMenu = () => {
+ const handleMenuClick = () => {
+  const navbarButton = document.querySelector('.mobile__menu__button')
   const navbarList = document.getElementById('navbar__list')
 
   if (navbarList.style.transform === 'translateX(-180px)') {
-    return navbarList.style.transform = 'translateX(180px)'
+    navbarList.style.transform = 'translateX(180px)'
+  } else {
+    navbarList.style.transform = 'translateX(-180px)'
   }
-    
-  return navbarList.style.transform = 'translateX(-180px)'
+
+  navbarButton.classList.toggle('active__menu')
 }
 
-
-
-// showMobileMenu
 
 document.addEventListener('DOMContentLoaded', () => {
   const navList = document.getElementById('navbar__list')
@@ -153,10 +153,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// Build menu 
 
-// Scroll to section on link click
-
-// Set sections as active
-
-// Preloader ? 
+// Preloader

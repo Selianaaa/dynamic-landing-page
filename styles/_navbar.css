@@ -29,6 +29,7 @@
   margin-right: 10px;
 }
 
+
 .nav__link {
   display: inline-block;
   font-size: 30px;
@@ -53,18 +54,65 @@
   color: #7da3e4;
 }
 
-#mobile__menu__button {
+.mobile__menu__button {
   position: relative;
   display: none;
+  height: 100%;
+  width: 20px;
+  margin: 3px 10px 3px 0;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
-.menu__dot {
+.mobile__menu__button span {
   position: relative;
   width: 7px;
   height: 7px;
-  border-radius: 50%;
+  border-radius: 20px;
   background: white;
+  transition: 0.1s linear;
 }
+
+.mobile__menu__button span::before, .mobile__menu__button span::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background: inherit;
+  transform-origin: center;
+  transition: width 0.1s, height 0.1s, transform 0.333s;
+}
+
+.mobile__menu__button span::before {
+  transform: translateY(-15px);
+}
+
+.mobile__menu__button span::after {
+  transform: translateY(15px);
+}
+
+.active__menu span {
+  width: 0;
+  height: 0;
+}
+
+.active__menu span::before, .active__menu span::after {
+  width: 25px;
+  height: 3px;
+}
+
+.active__menu span::before {
+  transform: translate(-12.5px, 0) rotate(45deg);
+}
+
+.active__menu span::after {
+  transform: translate(-12.5px, 0) rotate(-45deg);
+}
+
 
 @media (min-width: 1920px) {
   .navbar__menu {
@@ -94,23 +142,9 @@
 
 @media (max-width: 768px) {
 
-  #mobile__menu__button {
+  .mobile__menu__button {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    padding: 3px 10px 3px 0;
-    cursor: pointer;
   }
-
-  #mobile__menu__button:hover .menu__dot {
-    background: #7da3e4;
-  }
-  
-  #mobile__menu__button:active .menu__dot {
-    background: #4D648D;
-  }
-
 
   #navbar__list {
     position: absolute;
