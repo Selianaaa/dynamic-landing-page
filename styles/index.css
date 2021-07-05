@@ -1,6 +1,6 @@
-@import './_footer.css';
-@import './_navbar.css';
-@import './_section.css';
+@import './footer.css';
+@import './navbar.css';
+@import './section.css';
 
 
 * {
